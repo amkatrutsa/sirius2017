@@ -1,0 +1,108 @@
+\documentclass[12pt]{beamer}
+\usepackage{../latex-sty/mypres}
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+\usefonttheme[onlymath]{serif}
+\usepackage{listings}
+\lstset{language=Python}
+
+\begin{document}
+\title[]{Введение в современную теорию \\ методов оптимизации}
+
+\author[А. Катруца]{Aлександр Катруца \\[0.9cm] 
+\includegraphics[scale=0.5]{logo_sirius}}
+
+\date{Сочи 2017}
+\begin{frame}
+\maketitle
+\end{frame}
+
+\begin{frame}{Введение}
+
+\begin{itemize}
+\item Что такое методы оптимизации?
+\item Какой математический аппарат используется?
+\item Как развивалась теория методов оптимизации?
+\item Какие главные результаты?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Обозначения и типы задач}
+\begin{equation*}
+\begin{split}
+& \min f(x)\\
+\text{s.t. } & x \in X \subseteq \bbR^n
+\end{split}
+\end{equation*}
+
+\begin{itemize}
+\item Глобальный vs. локальный минимум
+\item Условная vs.безусловная задача
+\item Непрерывная vs. дискретная задача
+\item Детерминированная vs. стохастическая задача
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Как сравнивать методы оптимизации?}
+\begin{itemize}
+\item Теоретическая сложность~--- об этом ниже
+\item Масштабируемость
+\item Время работы
+\item Простота понимания и реализации
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Общая схема}
+
+\begin{lstlisting}[language=Python]
+while (True):
+    h = FindDirection(...)
+    alpha = FindStepSize(...)
+    x = x + alpha * h
+    if StopCriterion(...):
+    	break
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}{Методы первого порядка}
+Идея: помимо значения функции в точке, использовать значение первой производной.
+
+\begin{itemize}
+\item градиентный спуск
+\item метод сопряжённых градиентов
+\item квазиньютоновские методы
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Методы второго порядка}
+
+Идея: помимо значения функции в точке и значения первой производной использовать значения {\color{red}{второй}} производной в точке.
+
+\begin{itemize}
+\item Метод Ньютона
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Теория двойственности}
+
+\end{frame}
+
+\begin{frame}{Элементы теории сложности}
+
+\end{frame}
+
+\begin{frame}{Оптимальные методы}
+
+\end{frame}
+
+\begin{frame}{Заключение}
+
+\end{frame}
+
+\end{document}
