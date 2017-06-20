@@ -7,3 +7,7 @@
 *.gz
 *.spl
 *.pyc
+*.log
+*.snm
+*.nav
+.ipynb_checkpoints/
